@@ -395,7 +395,7 @@ end
 
 def player_with_longest_name
   
-  mvp = ""
+  longest_name = ""
   
     game_hash.each do |location, team_data|
     
@@ -407,9 +407,9 @@ def player_with_longest_name
             player_name = player.keys[0]
             
             
-            if player_name.length > mvp.length
+            if player_name.length > longest_name.length
               
-              mvp = player_name
+              longest_name = player_name
           
         
             end
@@ -420,6 +420,6 @@ def player_with_longest_name
 
       end
     end
-  return mvp
+  return longest_name
 end
 
